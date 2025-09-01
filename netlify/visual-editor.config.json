@@ -1,0 +1,53 @@
+{
+  "collections": [
+    {
+      "label": "Homepage Content",
+      "name": "home",
+      "path": "index.html",
+      "fields": [
+        {
+          "label": "Main Title",
+          "name": "main_title",
+          "selector": "h1",
+          "type": "text"
+        },
+        {
+          "label": "Subtitle",
+          "name": "subtitle",
+          "selector": "p:nth-of-type(1)",
+          "type": "text"
+        },
+        {
+          "label": "Company Description",
+          "name": "description",
+          "selector": "p:nth-of-type(2)",
+          "type": "text"
+        },
+        {
+          "label": "Legal Notice",
+          "name": "notice",
+          "selector": "p:nth-of-type(3)",
+          "type": "text"
+        },
+        {
+          "label": "Email Link",
+          "name": "email",
+          "selector": "a[href^='mailto']",
+          "type": "text"
+        },
+        {
+          "label": "Registry Title",
+          "name": "registry_title",
+          "selector": ".registry-box h4",
+          "type": "text"
+        },
+        {
+          "label": "LEI Code",
+          "name": "lei_code",
+          "selector": ".registry-box div:last-of-type",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
