@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GW Elite Holdings Ltd. — Official Notice</title>
+  <title>GW Elite Holdings Ltd. (C. 61402) — Official Notice</title>
   <meta name="description" content="GW Elite Holdings Ltd. — Private fiduciary organization operating under trust law. Official public notice and contact." />
   <meta property="og:title" content="GW Elite Holdings Ltd. — Official Notice" />
   <meta property="og:description" content="Private fiduciary organization operating under trust law. Official public notice and contact." />
@@ -26,14 +26,11 @@
     html,body{height:100%}
     body{margin:0;font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--ink);background:var(--ink)}
 
-    /* three-panel layout */
     .layout{display:grid;grid-template-columns:1fr minmax(340px,640px) 1fr;min-height:100dvh}
 
-    /* Left panel: growth/capital photograph */
     .left{position:relative;overflow:hidden;background:#000}
     .left::before{content:"";position:absolute;inset:0;background:url('/assets/left.jpg') center/cover no-repeat;}
 
-    /* Center panel: notice card */
     .center{background:var(--beige);display:grid;place-items:center;padding:28px}
     .card{max-width:640px;width:100%;background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,.4));border:1px solid rgba(0,0,0,.06);border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);padding:24px 22px;display:grid;gap:14px}
     .kicker{display:inline-flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px}
@@ -47,12 +44,10 @@
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;border:1px solid rgba(0,0,0,.12);transition:transform .08s ease, box-shadow .2s ease}
     .btn:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.12)}
     .btn.gold{background:var(--gold);color:var(--gold-ink)}
-    .btn.outline{background:transparent;color:var(--ink)}
 
     .meta{display:flex;gap:12px;flex-wrap:wrap;border-top:1px dashed rgba(0,0,0,.18);padding-top:12px;margin-top:4px;font-size:14px;color:#2a2a2a}
     .badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.14);background:#fff}
 
-    /* Right panel: aqua water frame + IPFS optional */
     .right{position:relative;background:#000;display:flex;align-items:center;justify-content:center;padding:28px}
     .frame{position:relative;max-width:560px;width:90%;aspect-ratio:3/4;border:18px solid var(--ink);box-shadow:0 12px 50px rgba(0,0,0,.6);background:linear-gradient(135deg,var(--aqua1),var(--aqua2))}
     .frame::before{content:"";position:absolute;inset:0;background:url('/assets/right.jpg') center/cover no-repeat;opacity:.95;mix-blend-mode:overlay}
@@ -60,7 +55,6 @@
 
     footer{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);color:#c7c7c7;font-size:13px}
 
-    /* responsive */
     @media (max-width:980px){
       .layout{grid-template-columns:1fr}
       .left{height:36vh}
@@ -78,14 +72,13 @@
         <div class="kicker">GW ELITE HOLDINGS LTD.</div>
         <h1>Official Public Notice</h1>
         <div class="stack copy">
-          <p>GW Elite Holdings Ltd. is a private fiduciary organization operating under trust law, incorporated as an International Business Corporation under the Nevis Business Corporation Ordinance Cap 7.01.</p>
-          <p>This domain serves as the official public notice for GW Elite Holdings, a private fiduciary organization operating under trust authority. Access to corporate documents, fiduciary records, or internal financials is strictly limited to duly authorized parties through lawful private channels.</p>
+          <p>GW Elite Holdings Ltd. is a private international fiduciary organization operating under the Nevis Business Corporation Ordinance Cap 7.01.</p>
+          <p>This domain serves as the official public notice for GW Elite Holdings Ltd. Access to corporate documents, trust records, or internal financials is strictly limited to duly authorized parties through lawful private channels.</p>
           <p><strong>Contact</strong><br/>
           Email: <a href="mailto:trust@gwelite.org">trust@gwelite.org</a></p>
         </div>
         <div class="cta-row">
           <a class="btn gold" href="/assets/GW_Elite_Public_Fiduciary_Notice.pdf" target="_blank" rel="noopener">Download Public Fiduciary Notice</a>
-          <a class="btn outline" href="mailto:trust@gwelite.org">Email Us</a>
         </div>
         <div class="meta">
           <span class="badge">LEI Code: 984500D0VE78C77E5F67</span>
@@ -99,7 +92,7 @@
     </section>
   </main>
 
-  <footer>© <span id="y"></span> GW Elite Holdings Ltd.</footer>
+  <footer>© <span id="y"></span> GW Elite Holdings Ltd. All Rights Reserved.</footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
