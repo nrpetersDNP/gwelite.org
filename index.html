@@ -1,145 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GW Elite Holdings</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GW Elite Holdings Ltd. — Official Notice</title>
+  <meta name="description" content="GW Elite Holdings Ltd. — Private fiduciary organization operating under trust law. Official public notice and contact." />
+  <meta property="og:title" content="GW Elite Holdings Ltd. — Official Notice" />
+  <meta property="og:description" content="Private fiduciary organization operating under trust law. Official public notice and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <link rel="icon" href="/assets/favicon.ico" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #333;
-      margin: 0;
-      padding: 0;
+    :root{
+      --ink:#0a0a0a;         /* black */
+      --paper:#ffffff;       /* white */
+      --gold:#f0d371;        /* gold */
+      --gold-ink:#111111;    /* dark for gold button text */
+      --beige:#ead991;       /* brand beige */
+      --muted:#565656;       /* secondary text */
+      --ring:rgba(240,211,113,.35);
+      --aqua1:#8ee7ff;       /* aqua water tones */
+      --aqua2:#3cc3ff;
     }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      padding: 40px 30px;
-    }
-    img.logo {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #002b45;
-    }
-    h4 {
-      color: #002b45;
-    }
-    p {
-      font-size: 16px;
-      margin-bottom: 16px;
-    }
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background-color: #0056b3;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background-color: #003f87;
-    }
-    .downloads {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-      margin-top: 30px;
-    }
-    @media (min-width: 600px) {
-      .downloads {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #666;
-      border-top: 1px solid #e0e0e0;
-      padding-top: 20px;
-      text-align: center;
-    }
-    .registry-box {
-      margin-top: 40px;
-      padding: 20px;
-      background: #f0f4f8;
-      border: 1px solid #d0dce5;
-      border-radius: 8px;
-      font-size: 0.95em;
-      text-align: left;
-    }
-    .registry-box h4 {
-      margin-top: 0;
-      margin-bottom: 1em;
-      text-align: center;
-    }
-    .registry-box div {
-      margin-bottom: 8px;
-    }
-    .disclaimer {
-      margin-top: 30px;
-      font-size: 0.75em;
-      color: #999;
-      text-align: justify;
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--ink);background:var(--ink)}
+
+    /* three-panel layout */
+    .layout{display:grid;grid-template-columns:1fr minmax(340px,640px) 1fr;min-height:100dvh}
+
+    /* Left panel: growth/capital photograph */
+    .left{position:relative;overflow:hidden;background:#000}
+    .left::before{content:"";position:absolute;inset:0;background:url('/assets/left.jpg') center/cover no-repeat;}
+
+    /* Center panel: notice card */
+    .center{background:var(--beige);display:grid;place-items:center;padding:28px}
+    .card{max-width:640px;width:100%;background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,.4));border:1px solid rgba(0,0,0,.06);border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.25);padding:24px 22px;display:grid;gap:14px}
+    .kicker{display:inline-flex;gap:10px;align-items:center;font-weight:800;letter-spacing:.4px}
+    .kicker::before{content:"";width:6px;height:22px;background:var(--ink);border-radius:2px}
+    h1{font-size:clamp(22px,3.8vw,28px);margin:2px 0 2px}
+    .copy{color:#1a1a1a}
+    .muted{color:var(--muted)}
+    .stack{display:grid;gap:10px}
+
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;border:1px solid rgba(0,0,0,.12);transition:transform .08s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 10px 18px rgba(0,0,0,.12)}
+    .btn.gold{background:var(--gold);color:var(--gold-ink)}
+    .btn.outline{background:transparent;color:var(--ink)}
+
+    .meta{display:flex;gap:12px;flex-wrap:wrap;border-top:1px dashed rgba(0,0,0,.18);padding-top:12px;margin-top:4px;font-size:14px;color:#2a2a2a}
+    .badge{padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.14);background:#fff}
+
+    /* Right panel: aqua water frame + IPFS optional */
+    .right{position:relative;background:#000;display:flex;align-items:center;justify-content:center;padding:28px}
+    .frame{position:relative;max-width:560px;width:90%;aspect-ratio:3/4;border:18px solid var(--ink);box-shadow:0 12px 50px rgba(0,0,0,.6);background:linear-gradient(135deg,var(--aqua1),var(--aqua2))}
+    .frame::before{content:"";position:absolute;inset:0;background:url('/assets/right.jpg') center/cover no-repeat;opacity:.95;mix-blend-mode:overlay}
+    .chip{position:absolute;top:22px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:10px;border:1px solid rgba(0,0,0,.16);font-weight:800;letter-spacing:.4px}
+
+    footer{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);color:#c7c7c7;font-size:13px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .layout{grid-template-columns:1fr}
+      .left{height:36vh}
+      .right{height:48vh}
+      footer{position:static;transform:none;text-align:center;margin:10px 0 20px}
     }
   </style>
 </head>
 <body>
-  <div class="container" align="center">
-    <img src="GWEliteHoldingsLogo.png" alt="GW Elite Holdings Logo" class="logo" />
+  <main class="layout">
+    <section class="left" aria-label="Brand image: growth and capital"></section>
 
-    <h1 data-netlify-editable="true"><strong>GW Elite Holdings</strong></h1>
+    <section class="center" aria-label="Official public notice">
+      <div class="card">
+        <div class="kicker">GW ELITE HOLDINGS LTD.</div>
+        <h1>Official Public Notice</h1>
+        <div class="stack copy">
+          <p>GW Elite Holdings Ltd. is a private fiduciary organization operating under trust law, incorporated as an International Business Corporation under the Nevis Business Corporation Ordinance Cap 7.01.</p>
+          <p>This domain serves as the official public notice for GW Elite Holdings, a private fiduciary organization operating under trust authority. Access to corporate documents, fiduciary records, or internal financials is strictly limited to duly authorized parties through lawful private channels.</p>
+          <p><strong>Contact</strong><br/>
+          Email: <a href="mailto:trust@gwelite.org">trust@gwelite.org</a></p>
+        </div>
+        <div class="cta-row">
+          <a class="btn gold" href="/assets/GW_Elite_Public_Fiduciary_Notice.pdf" target="_blank" rel="noopener">Download Public Fiduciary Notice</a>
+          <a class="btn outline" href="mailto:trust@gwelite.org">Email Us</a>
+        </div>
+        <div class="meta">
+          <span class="badge">LEI Code: 984500D0VE78C77E5F67</span>
+        </div>
+      </div>
+    </section>
 
-    <p data-netlify-editable="true"><strong>Private International Asset Holding Trust Entity</strong></p>
+    <section class="right" aria-label="Ocean texture">
+      <div class="chip" aria-hidden="true">IPFS</div>
+      <div class="frame" role="img" aria-label="Aqua water texture"></div>
+    </section>
+  </main>
 
-    <p data-netlify-editable="true"><strong>GW Elite Holdings Ltd</strong> is incorporated in <strong>Nevis</strong> as an <strong>International Business Corporation</strong> under the <strong>Nevis Business Corporation Ordinance Cap 7.01</strong>.</p>
+  <footer>© <span id="y"></span> GW Elite Holdings Ltd.</footer>
 
-    <p data-netlify-editable="true">This domain serves as the official public notice for <strong>GW Elite Holdings</strong>, a private fiduciary organization operating under trust authority. Access to corporate documents, fiduciary records, or internal financials is strictly limited to duly authorized parties through lawful private channels.</p>
-
-    <p data-netlify-editable="true"><strong>Contact:</strong><br />
-      Email: <a href="mailto:trust@gwelite.org" data-netlify-editable="true">trust@gwelite.org</a>
-    </p>
-
-    <a href="Public_Fiduciary_Notice.pdf" class="button" download data-netlify-editable="true">
-      📄 Download Public Fiduciary Notice
-    </a>
-
-    <div class="downloads">
-      <a href="https://gateway.pinata.cloud/ipfs/bafybeie7eoiyrck2cdnfxtqt6x42bkqhpuxsy2c3rv7f6xiyxlecnizghi" class="button" target="_blank" data-netlify-editable="true">
-        📁 View Certificate of Incorporation (IPFS)
-      </a>
-    </div>
-
-    <div class="registry-box">
-      <h4 data-netlify-editable="true">Corporate Registry Reference</h4>
-      <div data-netlify-editable="true"><strong>Company Name:</strong> GW Elite Holdings Ltd.</div>
-      <div data-netlify-editable="true"><strong>Entity Type:</strong> International Business Corporation (IBC)</div>
-      <div data-netlify-editable="true"><strong>Jurisdiction:</strong> The Federation of Saint Kitts and Nevis</div>
-      <div data-netlify-editable="true"><strong>Register Authority:</strong> Financial Services Regulatory Commission (FSRC)</div>
-      <div data-netlify-editable="true"><strong>Public Listing:</strong> Not yet indexed on <a href="https://opencorporates.com/registers" target="_blank">OpenCorporates</a></div>
-      <div data-netlify-editable="true"><strong>Wikidata:</strong> <a href="https://www.wikidata.org/wiki/Q135479679" target="_blank">Q135479679</a></div>
-      <div data-netlify-editable="true"><strong>LEI Code:</strong> 984500D0VE78C77E5F67</div>
-    </div>
-  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
