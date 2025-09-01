@@ -47,7 +47,8 @@
     .right{position:relative;background:#000;display:flex;align-items:center;justify-content:center;padding:28px}
     .frame{position:relative;max-width:560px;width:90%;aspect-ratio:3/4;border:18px solid var(--ink);box-shadow:0 12px 50px rgba(0,0,0,.6);background:linear-gradient(135deg,var(--aqua1),var(--aqua2))}
     .frame::before{content:"";position:absolute;inset:0;background:url('/assets/right.jpg') center/cover no-repeat;opacity:.95;mix-blend-mode:overlay}
-    .chip{position:absolute;top:22px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:10px;border:1px solid rgba(0,0,0,.16);font-weight:800;letter-spacing:.4px}
+    .chip{position:absolute;top:22px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--gold-ink);padding:10px 16px;border-radius:10px;border:1px solid rgba(0,0,0,.16);font-weight:800;letter-spacing:.4px;text-decoration:none}
+    .chip:hover{filter:brightness(1.05);box-shadow:0 4px 14px rgba(0,0,0,.25)}
 
     footer{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);color:#c7c7c7;font-size:13px}
 
@@ -80,7 +81,7 @@
     </section>
 
     <section class="right" aria-label="Ocean texture">
-      <div class="chip" aria-hidden="true">IPFS</div>
+      <a class="chip" href="/assets/Certificate_IncorporationIBC_Nevis_GWEliteHoldingsLtd.pdf" target="_blank" rel="noopener">IPFS</a>
       <div class="frame" role="img" aria-label="Aqua water texture"></div>
     </section>
   </main>
