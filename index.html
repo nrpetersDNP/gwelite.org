@@ -46,6 +46,9 @@
 
     .right{position:relative;overflow:hidden;}
     .right::before{content:"";position:absolute;inset:0;background:url('assets/right.jpg?v=2') center/cover no-repeat;}
+    .top-link{position:absolute;top:16px;right:16px;z-index:2;}
+    .top-link a{padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.7);background:rgba(0,0,0,.4);color:#fff;text-decoration:none;font-size:14px;}
+    .top-link a:hover{background:var(--gold);color:var(--gold-ink);}
 
     footer{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);color:#c7c7c7;font-size:13px}
 
@@ -78,7 +81,11 @@
       </div>
     </section>
 
-    <section class="right" aria-label="Ocean image"></section>
+    <section class="right" aria-label="Ocean image">
+      <div class="top-link">
+        <a href="assets/Public_Fiduciary_Notice.pdf" target="_blank">Download Notice</a>
+      </div>
+    </section>
   </main>
 
   <footer>© <span id="y"></span> GW Elite Holdings Ltd.</footer>
